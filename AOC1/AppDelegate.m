@@ -27,19 +27,33 @@
     //Project Work Flow Begins Here
     //Declare Variables
     int passAttempts = 10;
-    int completions = 3;
+    int completions = 5;
+    int passes = 0;
+    int sessionGoal = 5;
+    int session = 0;
     float accuracy = (completions / passAttempts) * 100;
     float health = 100.00;
     float stamina = 95.00;
-    BOOL isStarter = YES;
+    BOOL isStarter = NO;
     
     // Initiate Story
     NSLog(@"James is a quarterback and is about to begin a throwing practice session.");
     
-    // single for loop that iterates through pass attempts
-    for (int passes = 1; passes<=passAttempts; passes++) {
+    //While Loop that iterates through passes thrown
+    while ( passes < passAttempts) {
+        passes++;
         NSLog(@"James throws pass attempt number %d", passes);
+        //        for (float stamina = 100; stamina > 50.00; stamina--) {
+        //
+        //        }
+        //        NSLog(@"James has finished session %d.  His stamina is now at %.2f%%", session, stamina);
     }
+
+    
+//    // single for loop that iterates through pass attempts
+//    for (int passes = 1; passes<=passAttempts; passes++) {
+//        NSLog(@"James throws pass attempt number %d", passes);
+//    }
     
     // AND, OR comparison... float, int and BOOL types used
     if ((completions>= 5 && health >= 90) || (isStarter == YES)){
@@ -50,6 +64,7 @@
         NSLog(@"Sorry James, you aren't quite ready to start for us");
     }
     
+        
     return YES;
 }
 
