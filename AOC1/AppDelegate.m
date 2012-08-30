@@ -16,7 +16,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    return YES;
+    
     
     /*  James E. McPherson III
         AOC1: Project 1
@@ -25,6 +25,15 @@
     */
     
     //Project Work Flow Begins Here
+    //Declare Variables
+    int passAttempts = 10;
+    int completions = 6;
+    float accuracy = (completions / passAttempts) * 100;
+    BOOL isStarter = YES;
+    
+    
+    
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
