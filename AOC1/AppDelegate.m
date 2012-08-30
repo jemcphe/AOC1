@@ -27,10 +27,19 @@
     //Project Work Flow Begins Here
     //Declare Variables
     int passAttempts = 10;
-    int completions = 6;
+    int completions = 5;
     float accuracy = (completions / passAttempts) * 100;
-    BOOL isStarter = YES;
+    float health = 100.00;
+    float stamina = 95.00;
+    BOOL isStarter = NO;
     
+    // Initiate Story
+    NSLog(@"James is a quarterback and is about to begin a throwing practice session.");
+    
+    // single for loop that iterates through pass attempts
+    for (int passes = 1; passes<=passAttempts; passes++) {
+        NSLog(@"James throws pass attempt number %d", passes);
+    }
     
     
     return YES;
