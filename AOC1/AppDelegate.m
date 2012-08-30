@@ -17,6 +17,14 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+    
+    /*  James E. McPherson III
+        AOC1: Project 1
+        TERM: 1209
+        08/29/2012
+    */
+    
+    //Project Work Flow Begins Here
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
