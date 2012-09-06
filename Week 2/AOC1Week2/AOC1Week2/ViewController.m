@@ -16,12 +16,18 @@
 
 - (void)viewDidLoad
 {
+    //Begin Week 2 code
+    
+    //Change Background Color
+    self.view.backgroundColor = [UIColor colorWithRed:0.027 green:0.302 blue:0.482 alpha:1]; /*#074d7b*/
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidUnload
 {
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
