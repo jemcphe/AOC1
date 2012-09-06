@@ -15,11 +15,12 @@
     //UILabel Objects
     UILabel *bookTitle;
     UILabel *authorLabel;
-    UILabel *authorName;
+    UILabel *authorLabelText;
     UILabel *publishedLabel;
     UILabel *publishedText;
-    UILabel *SummaryLabel;
-    UILabel *SummaryText;
+    UILabel *summaryLabel;
+    UILabel *summaryText;
+    UILabel *topicLabel;
     
     //NSArray
     NSArray *bookTopics;
