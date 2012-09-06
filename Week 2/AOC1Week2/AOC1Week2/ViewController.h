@@ -21,6 +21,7 @@
     UILabel *summaryLabel;
     UILabel *summaryText;
     UILabel *topicLabel;
+    UILabel *topicLabelText;
     
     //NSArray
     NSArray *bookTopics;
@@ -33,7 +34,7 @@
     NSString *topic5;
     
     //NSMutableString
-    NSMutableString *topicText;
+    NSMutableString *topics;
 }
 
 @end

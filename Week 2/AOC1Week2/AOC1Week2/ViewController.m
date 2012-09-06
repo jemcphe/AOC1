@@ -103,6 +103,17 @@
     }
     [self.view addSubview:topicLabel];
     
+    //Create topics (from the book) that will be used in NSArray
+    topic1 = [[NSString alloc] initWithString:@"Driving"];
+    topic2 = [[NSString alloc] initWithString:@"Irons"];
+    topic3 = [[NSString alloc] initWithString:@"Chipping"];
+    topic4 = [[NSString alloc] initWithString:@"Putting"];
+    topic5 = [[NSString alloc] initWithString:@"Mentality"];
+    
+    //Create an array and fill it with objects
+    bookTopics = [[NSArray alloc] initWithObjects:topic1, topic2, topic3, topic4, topic5, nil];
+    NSLog(@"%@", [bookTopics description]);
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
