@@ -124,7 +124,15 @@
         }
     }
     
-    
+    topicLabelText = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 350.0f, 300.0f, 75.0f)];
+    if (topicLabelText != nil) {
+        topicLabelText.backgroundColor = [UIColor colorWithRed:1 green:0 blue:0.4 alpha:1]; /*#ff0066*/
+        topicLabelText.text = topics;
+        topicLabelText.textColor = [UIColor colorWithRed:0.424 green:0.918 blue:0.922 alpha:1]; /*#6ceaeb*/
+        topicLabelText.textAlignment = UITextAlignmentCenter;
+        topicLabelText.numberOfLines = 2;
+    }
+    [self.view addSubview:topicLabelText];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
