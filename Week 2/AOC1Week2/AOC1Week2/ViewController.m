@@ -114,6 +114,18 @@
     bookTopics = [[NSArray alloc] initWithObjects:topic1, topic2, topic3, topic4, topic5, nil];
     NSLog(@"%@", [bookTopics description]);
     
+    //Create NSMutableString, allocate, create loop to iterate through NSArray (bookTopics) and append topics to NSMutableString
+    topics = [[NSMutableString alloc] initWithCapacity:5];
+    
+    for (int i = 0; i < bookTopics.count; i++) {
+        [topics appendString:[bookTopics objectAtIndex: i]];
+        if (i < bookTopics.count -1) {
+            [topics appendString: @", "];
+        }
+    }
+    
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
