@@ -27,6 +27,13 @@
         [self displayAlertWithString:messageText];
     }
     
+    // Create variable that declares int values, NSNumber object that holds int values, and NSString to
+    // display the data to the user... this will pay displayed by calling displayAlertWithString Function.
+    int addFunctionResult = [self add:10 num2:5];
+    NSNumber* returnedInt = [[NSNumber alloc] initWithInt:addFunctionResult];
+    NSString* displayIntWithString = [[NSString alloc] initWithFormat:@"The number is %@", returnedInt];
+    
+    [self displayAlertWithString:displayIntWithString];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
