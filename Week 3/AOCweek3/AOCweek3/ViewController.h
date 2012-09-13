@@ -18,4 +18,6 @@
 - (BOOL)compare:(NSInteger)num3 num4:(NSInteger)num4;
 
 - (NSString*)append:(NSString*)string1 string2:(NSString*)string2;
+
+- (void)displayAlertWithString:(NSString*)alertText;
 @end

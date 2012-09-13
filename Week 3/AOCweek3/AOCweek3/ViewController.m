@@ -68,7 +68,12 @@
     return newString;
 }
 
-
+//create a function that creates an alert box and displays a message to the user.
+- (void)displayAlertWithString:(NSString*)alertText
+{
+    UIAlertView* myAlert = [[UIAlertView alloc] initWithTitle:@"Alert Box" message:alertText delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [myAlert show];
+}
 
 
 
