@@ -16,7 +16,16 @@
 
 - (void)viewDidLoad
 {
-
+    //Declare variables here
+    NSString* messageText = @"";
+    
+    //create if statement that checks for messageText and display in alertBox
+    if (messageText != nil) {
+        messageText = [self append:@"Hey, I'm an Alert Message!! " string2:@"Just press OK to move on"];
+        
+        //Use displayAlertWithString function to display the message to user
+        [self displayAlertWithString:messageText];
+    }
     
     
     [super viewDidLoad];
