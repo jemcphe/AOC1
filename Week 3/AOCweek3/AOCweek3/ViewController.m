@@ -45,4 +45,18 @@
     return num1 + num2;
 };
 
+//creating BOOL to compare
+- (BOOL)compare:(NSInteger)num3 num4:(NSInteger)num4
+{
+    // set compareResult equal to NO, then use if statement to check if arguments equal each other.  If they do
+    // set compareResult equal to YES... Return compareResult.
+    BOOL compareResult = NO;
+    
+    if (num3 == num4) {
+        compareResult = YES;
+    }
+    
+    return compareResult;
+}
+
 @end
