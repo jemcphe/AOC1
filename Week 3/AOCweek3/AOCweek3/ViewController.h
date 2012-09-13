@@ -9,8 +9,19 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-{
+{    
+    NSNumber* returnedInt;
     
+    BOOL compareResult;
+    BOOL comparison;
+    
+    NSString* messageText;
+    NSString* displayIntWithString;
+    NSString* comparisonText;
+    
+    NSMutableString* newString;
+    
+    UIAlertView* myAlert;
 }
 
 - (int)add:(int)num1 num2:(int)num2;
