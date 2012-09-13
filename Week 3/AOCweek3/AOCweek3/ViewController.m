@@ -59,4 +59,19 @@
     return compareResult;
 }
 
+//creating append function
+- (NSString*)append:(NSString*)string1 string2:(NSString*)string2
+{
+    NSMutableString* newString = [[NSMutableString alloc] initWithString:string1];
+    [newString appendString:string2];
+    
+    return newString;
+}
+
+
+
+
+
+
+
 @end
