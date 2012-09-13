@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad
 {
+
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -34,5 +37,12 @@
         return YES;
     }
 }
+
+//creating add function
+- (int)add:(int)num1 num2:(int)num2
+{
+    //define what is to be returned from this function
+    return num1 + num2;
+};
 
 @end

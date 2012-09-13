@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    
+}
+
+- (int)add:(int)num1 num2:(int)num2;
 
 @end
