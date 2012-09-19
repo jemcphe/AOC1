@@ -27,7 +27,7 @@
     
     //These are the numbers used for the comparison Function
     int number1 = 23;
-    int number2 = 25;
+    int number2 = 23;
     
     //comparison will call the compare function, take 2 numbers and comparisonText will pass into
     //displayAlertWithString function to present to user.
