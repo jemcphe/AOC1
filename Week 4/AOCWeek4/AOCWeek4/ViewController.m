@@ -48,7 +48,7 @@
     }
     
     // Create a label that will display helpful information to user
-    userPrompt = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 150.0f, 320.0f, 100.0f)];
+    userPrompt = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 80.0f, 320.0f, 80.0f)];
     
     if (userPrompt != nil) {
         userPrompt.backgroundColor = [UIColor whiteColor];
@@ -57,6 +57,15 @@
         [self.view addSubview:userPrompt];
     }
     
+    //create a button for user to select and show the date
+    dateButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    
+    //check for dateButton existance
+    if (dateButton != nil) {
+        dateButton.frame = CGRectMake(110.0f, 200.0f, 100.0f, 30.0f);
+        [dateButton setTitle:@"Show Date" forState:UIControlStateNormal];
+        [self.view addSubview:dateButton];
+    }
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
