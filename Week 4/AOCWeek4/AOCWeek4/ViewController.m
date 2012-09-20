@@ -42,13 +42,15 @@
     
     //check for button existance
     if (loginButton != nil) {
-        loginButton.frame = CGRectMake(220.0f, 40.0f, 80.0f, 30.0f);
+        loginButton.tag = 0;
+        loginButton.frame = CGRectMake(220.0f, 50.0f, 80.0f, 30.0f);
         [loginButton setTitle:@"Login" forState:UIControlStateNormal];
+        [loginButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:loginButton];
     }
     
     // Create a label that will display helpful information to user
-    userPrompt = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 80.0f, 320.0f, 80.0f)];
+    userPrompt = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 100.0f, 320.0f, 80.0f)];
     
     if (userPrompt != nil) {
         userPrompt.backgroundColor = [UIColor whiteColor];
@@ -62,9 +64,21 @@
     
     //check for dateButton existance
     if (dateButton != nil) {
-        dateButton.frame = CGRectMake(110.0f, 200.0f, 100.0f, 30.0f);
+        dateButton.tag = 1;
+        dateButton.frame = CGRectMake(110.0f, 225.0f, 100.0f, 30.0f);
         [dateButton setTitle:@"Show Date" forState:UIControlStateNormal];
+        [dateButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:dateButton];
+    }
+    
+    //create info button that will display developer information
+    infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    
+    //check for infoButton existance
+    if (infoButton != nil) {
+        infoButton.tag = 2;
+        infoButton.frame = CGRectMake(150.0f, 300.0f, 20.0f, 20.0f);
+        [self.view addSubview:infoButton];
     }
     
     [super viewDidLoad];
@@ -85,5 +99,28 @@
         return YES;
     }
 }
+
+- (void)onClick: (UIButton*) button
+{
+    //variable to grab user input from text field
+    userText = [userNameTextField text];
+    //variable to display name of user that has logged in.
+    userName = [[NSString alloc] initWithFormat:@"User: %@ has been logged in.", userText];
+    
+    
+    if (button.tag == 0) {
+        if (userText == 0) {
+            userPrompt.text = @"Username cannot be empty";
+        } else {
+            userPrompt.text = userName;
+        }
+    }
+    else if (button.tag == 1)
+    {
+        alertView = [[UIAlertView alloc] initWithTitle:@"Today's Date" message:@"it works" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+}
+
 
 @end

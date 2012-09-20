@@ -25,7 +25,16 @@
     UIButton* dateButton;
     UIButton* infoButton;
     
+    //String declaration for user text
+    NSString* userText;
+    NSString* userName;
     
+    //UIAlertView
+    UIAlertView* alertView;
 }
+
+- (void)onClick: (UIButton*) button;
+
+
 
 @end
