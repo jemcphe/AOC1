@@ -19,6 +19,7 @@
     
     self.view.backgroundColor = [UIColor colorWithRed:0 green:0.6 blue:1 alpha:1]; /*#0099ff*/
     
+    
     userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 10.0f, 90.0f, 20.0f)];
     // check if userNameLabel exists
     if (userNameLabel != nil) {
@@ -91,12 +92,15 @@
         infoText.textColor = [UIColor whiteColor];
     }
     
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 - (void)viewDidUnload
 {
+    [self.view resignFirstResponder];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -123,6 +127,8 @@
         } else {
             userPrompt.text = userName;
         }
+        [self.view endEditing:TRUE];
+        
     }
     else if (button.tag == 1)
     {
@@ -147,6 +153,5 @@
         [self.view addSubview:infoText];
     }
 }
-
 
 @end

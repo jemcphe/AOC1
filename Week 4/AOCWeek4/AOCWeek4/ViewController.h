@@ -41,6 +41,7 @@
 
 - (void)onClick: (UIButton*) button;
 
+- (BOOL)textFieldShouldReturn: (UITextField*) textField;
 
 
 @end
