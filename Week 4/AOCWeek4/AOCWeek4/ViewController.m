@@ -82,7 +82,14 @@
         [self.view addSubview:infoButton];
     }
     
+    infoText = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 350.0f, 300.0f, 50.0f)];
     
+    if (infoText != nil) {
+        infoText.backgroundColor = [UIColor colorWithRed:0 green:0.6 blue:1 alpha:1]; /*#0099ff*/
+        infoText.textAlignment = UITextAlignmentCenter;
+        infoText.numberOfLines = 4;
+        infoText.textColor = [UIColor whiteColor];
+    }
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -130,8 +137,6 @@
             dateText = [dateFormatter stringFromDate:myDate];
             //NSString* displayDate = [[NSString alloc] initWithFormat:dateText.text];
             
-//            alertView = [[UIAlertView alloc] initWithTitle:@"Today's Date" message:displayDate delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-//            [alertView show];
             alertView = [[UIAlertView alloc] initWithTitle:@"Today's Date" message:dateText delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alertView show];
         }
@@ -139,6 +144,7 @@
     else if (button.tag == 2)
     {
         infoText.text = @"This application was created by James E. McPherson III";
+        [self.view addSubview:infoText];
     }
 }
 
