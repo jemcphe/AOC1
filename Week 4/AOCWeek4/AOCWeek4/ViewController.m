@@ -78,8 +78,11 @@
     if (infoButton != nil) {
         infoButton.tag = 2;
         infoButton.frame = CGRectMake(150.0f, 300.0f, 20.0f, 20.0f);
+        [infoButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:infoButton];
     }
+    
+    
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -107,9 +110,8 @@
     //variable to display name of user that has logged in.
     userName = [[NSString alloc] initWithFormat:@"User: %@ has been logged in.", userText];
     
-    
     if (button.tag == 0) {
-        if (userText == 0) {
+        if (userText.length == 0) {
             userPrompt.text = @"Username cannot be empty";
         } else {
             userPrompt.text = userName;
@@ -117,8 +119,26 @@
     }
     else if (button.tag == 1)
     {
-        alertView = [[UIAlertView alloc] initWithTitle:@"Today's Date" message:@"it works" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alertView show];
+        myDate = [NSDate date];
+        dateFormatter = [[NSDateFormatter alloc] init];
+       
+        
+        if (dateFormatter != nil)
+        {
+            [dateFormatter setDateStyle:NSDateFormatterFullStyle];
+            [dateFormatter setTimeStyle:NSDateFormatterFullStyle];
+            dateText = [dateFormatter stringFromDate:myDate];
+            //NSString* displayDate = [[NSString alloc] initWithFormat:dateText.text];
+            
+//            alertView = [[UIAlertView alloc] initWithTitle:@"Today's Date" message:displayDate delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//            [alertView show];
+            alertView = [[UIAlertView alloc] initWithTitle:@"Today's Date" message:dateText delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alertView show];
+        }
+    }
+    else if (button.tag == 2)
+    {
+        infoText.text = @"This application was created by James E. McPherson III";
     }
 }
 

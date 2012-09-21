@@ -16,6 +16,7 @@
     UILabel* userNameLabel;
     UILabel* userPrompt;
     UILabel* infoText;
+    NSString* dateText;
     
     //Username text field
     UITextField* userNameTextField;
@@ -29,8 +30,13 @@
     NSString* userText;
     NSString* userName;
     
+    
     //UIAlertView
     UIAlertView* alertView;
+    
+    //NSDate declarations
+    NSDate* myDate;
+    NSDateFormatter* dateFormatter;
 }
 
 - (void)onClick: (UIButton*) button;
